@@ -118,3 +118,21 @@ img {
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
+
+.img-frame {
+  width: 150px;           /* fixed frame width */
+  height: 150px;          /* fixed frame height */
+  overflow: hidden;       /* crop anything outside */
+  margin: 0 auto 10px;    /* center frame and add space below */
+  border: 1px solid #000; /* optional border around frame */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* optional background */
+}
+
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* makes image fill the frame nicely */
+}
