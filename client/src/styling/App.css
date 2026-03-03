@@ -1,10 +1,8 @@
-/* Ensure the page takes full height */
 html, body {
   height: 100%;
   margin: 0;
 }
 
-/* Body as a flex column so footer can sit at the bottom */
 body {
   display: flex;
   flex-direction: column;
@@ -13,16 +11,10 @@ body {
   background-color: #f4ede7;
 }
 
-/* Main content grows to fill space */
 .main {
-  flex: 1; /* pushes footer down if content is short */
+  flex: 1; /* pushes footer down */
   display: flex;
   flex-direction: column;
-}
-
-/* Optional: if you have a wrapper container */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  justify-content: space-between; /* ensures content stretches to fill page */
+  padding-bottom: 50px; /* optional extra space */
 }
