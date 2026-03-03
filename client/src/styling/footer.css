@@ -5,14 +5,14 @@
   bottom: 0;
   height: 60px;
   width: 100vw;
-  border-top: solid black;
+  border-top: rgb(150, 92, 85);
   z-index: 3;
   margin-top: 50px;
 }
 
 #sct1 {
   width: 33%;
-  background-color: whitesmoke;
+  background-color: rgb(244, 237, 231);
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -23,14 +23,14 @@
 
 #sct2 {
   width: 33%;
-  background-color: whitesmoke;
+  background-color: rgb(176, 185, 128);
   font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
 
 #sct3 {
   width: 33%;
-  background-color: whitesmoke;
+  background-color: rgb(176, 185, 128);
   font-family: "Courier New", Courier, monospace;
 }
 
