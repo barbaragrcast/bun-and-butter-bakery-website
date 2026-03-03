@@ -13,8 +13,8 @@
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
-  border: solid black;
-  background-color: white;
+  border: solid rgb(150, 92, 85);
+  background-color: rgb(244, 237, 231);
 }
 
 .featured-card {
@@ -24,6 +24,6 @@
 }
 
 #gallery-head {
-  background: black;
+  background: #E4AC4F;
   margin-top: -5px;
 }
