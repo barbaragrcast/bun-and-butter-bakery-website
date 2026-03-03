@@ -102,7 +102,7 @@ img {
   margin-top: 120px;
   width: 70vw;
   border: rgb(150, 92, 85);
-  background-color: rgb(244, 237, 231);
+  background-color: #ffa5cf;
   max-height: 50vh;
   overflow-y: scroll;
   z-index: 1000;
@@ -128,7 +128,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(244, 237, 231); /* optional background */
+  background-color: #fff; /* optional background */
 }
 
 .img-frame img {
