@@ -1,3 +1,4 @@
+// Shopping.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Product from "../components/product";
@@ -8,7 +9,6 @@ const PAGE_PRODUCTS = "products";
 const PAGE_CART = "cart";
 
 const Shopping = ({ searchTerm, addToCart: parentAddToCart }) => {
-  // STATES
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [cartList, setCartList] = useState([]);
@@ -17,7 +17,7 @@ const Shopping = ({ searchTerm, addToCart: parentAddToCart }) => {
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
-  // FETCH PRODUCTS
+  // Fetch products from backend
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -35,7 +35,7 @@ const Shopping = ({ searchTerm, addToCart: parentAddToCart }) => {
     fetchProducts();
   }, []);
 
-  // FILTER PRODUCTS
+  // Filter products based on search term
   useEffect(() => {
     const filtered = products.filter((product) =>
       product.name.toLowerCase().includes((searchTerm || "").toLowerCase())
@@ -43,29 +43,29 @@ const Shopping = ({ searchTerm, addToCart: parentAddToCart }) => {
     setFilteredProducts(filtered);
   }, [products, searchTerm]);
 
-  // ADD TO CART
+  // Handle Add to Cart
   const handleAddToCart = async (product) => {
     try {
       // Add to local cart state
       setCartList((prev) => [...prev, product]);
 
-      // Call App.jsx cart updater
+      // Update parent cart in App.jsx
       if (parentAddToCart) parentAddToCart(product);
 
-      // Add to backend cart table
+      // Send to backend cart table
       await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/cart`, product);
 
-      // Optional: navigate to cart page
+      // Optionally navigate to cart page
       navigate("/cart");
     } catch (err) {
       console.error("Failed to add product to cart", err);
     }
   };
 
-  // NAVIGATION
+  // Navigate between products and cart
   const navigateTo = (nextPage) => setPage(nextPage);
 
-  // RENDER PRODUCTS
+  // Render products page
   const renderProducts = () => (
     <>
       <header id="shopping-head">
@@ -85,15 +85,14 @@ const Shopping = ({ searchTerm, addToCart: parentAddToCart }) => {
           !error &&
           filteredProducts.map((product) => (
             <div className="card" key={product.id}>
-              <Product product={product} />
-              <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+              <Product product={product} addToCart={handleAddToCart} />
             </div>
           ))}
       </div>
     </>
   );
 
-  // RENDER CART
+  // Render cart page
   const renderCart = () => (
     <div id="cart-container">
       <button onClick={() => navigateTo(PAGE_PRODUCTS)} id="products-btn">
