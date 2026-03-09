@@ -137,3 +137,20 @@ img {
   height: 100%;
   object-fit: cover;     
 }
+
+.add-cart-btn {
+  background-color: rgb(228, 172, 175); /* your yellow/pink color */
+  color: rgb(150, 92, 85); /* your brown text */
+  border: none;
+  border-radius: 20px; /* makes it rounded */
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.add-cart-btn:hover {
+  background-color: rgb(176, 185, 128); /* green when hovering */
+}
