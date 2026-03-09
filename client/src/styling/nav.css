@@ -45,7 +45,6 @@
 .nav-items {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .search-btn {
