@@ -63,7 +63,9 @@ const Shopping = ({ searchTerm, addToCart, cart }) => {
           filteredProducts.map((product) => (
             <div className="card" key={product.id}>
               <Product product={product} />
-              <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+              <button className="add-cart-btn" onClick={() => handleAddToCart(product)}>
+                Add to Cart
+              </button>
             </div>
           ))}
       </div>
