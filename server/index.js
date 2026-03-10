@@ -119,6 +119,16 @@ apiRouter.post('/submit-form', async (req, res) => {
   }
 });
 
+
+app.get("/test-db", async (req, res) => {
+  try {
+    const { rows } = await db.query("SELECT * FROM products LIMIT 1");
+    res.json({ success: true, sample: rows[0] });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
 // Use API router
 app.use("/api", apiRouter);
 
