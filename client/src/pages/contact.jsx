@@ -6,7 +6,7 @@ const Contact = () => {
     <div id="contact-page">
       <div id="contact-container">
         <h1 className="parisienne-regular">Contact Us</h1>
-        <p>We’d love to hear from you! Questions, feedback, or just to say hi 😊</p>
+        <p>We’d love to hear from you! Questions, feedback, or just to say hi </p>
         <ContactForm />
       </div>
     </div>
