@@ -1,8 +1,9 @@
 #about {
-  padding: 80px 20px 40px; /* space from header and footer */
+   margin-top: 100px;
+  padding: 40px 20px 40px; 
   color: rgb(150, 92, 85); 
   text-align: center;
-  background-color: #fff8f5; /* subtle pastel background */
+  background-color: #f4ede7; 
   position: relative;
 }
 
@@ -22,11 +23,11 @@
 }
 
 .highlight {
-  color: rgb(228, 172, 175);
+  color:#ffa5cf;
   font-weight: bold;
 }
 
-/* Images container */
+
 .about-images {
   display: flex;
   justify-content: center;
@@ -36,13 +37,14 @@
 }
 
 .about-img {
-  width: 150px;      /* adjust size */
+  width: 150px;      
   height: auto;
-  border-radius: 15px; /* cute rounded corners */
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* soft shadow */
+  border-radius: 15px; 
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
   transition: transform 0.2s;
 }
 
 .about-img:hover {
-  transform: scale(1.05); /* small hover pop effect */
+  transform: scale(1.05); 
 }
+
