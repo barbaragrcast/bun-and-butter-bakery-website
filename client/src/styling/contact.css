@@ -1,20 +1,45 @@
+/* Contact Page Background */
 #contact-page {
   background: url("https://i.pinimg.com/736x/52/30/64/523064266f1a7aeaaaf525108b1dc4f2.jpg") center/cover no-repeat;
-  height: 140vh; /* full viewport height */
-  width: 110vw;
-
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px; /* leave space for navbar */
 }
 
+/* Form container */
+#contact-container {
+  background-color: rgba(255, 165, 207, 0.9); /* soft pink overlay */
+  padding: 30px 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Heading */
+#contact-container h1 {
+  font-family: "Parisienne", cursive;
+  font-size: 36px;
+  color: rgb(150, 92, 85);
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+#contact-container p {
+  font-size: 16px;
+  color: rgb(120, 70, 70);
+  margin-bottom: 20px;
+}
+
+/* Form styling */
 #contact {
-  position: absolute;
-  top: 80px;
-  margin-top: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .name,
@@ -22,24 +47,26 @@ select,
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 2px solid rgb(228, 172, 175);
+  border-radius: 10px;
   box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
   resize: vertical;
+  font-size: 14px;
 }
 
+/* Submit button */
 input[type="submit"] {
-  background-color: #B0B980(0, 92, 122);
-  color: white;
+  background-color: rgb(228, 172, 175);
+  color: rgb(150, 92, 85);
   padding: 12px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
 input[type="submit"]:hover {
-  background-color: #B0B980;
-  color: rgb(150, 92, 85); 
+  background-color: rgb(176, 185, 128);
+  color: rgb(150, 92, 85);
 }
