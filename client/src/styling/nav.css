@@ -40,7 +40,7 @@
 #logo {
   height: 60px;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 
@@ -118,10 +118,11 @@
   color: rgb(150, 92, 85);
   padding: 8px 16px;
   border-radius: 20px;
-  font-weight: bold;
   text-decoration: none;
   transition: 0.2s;
   text-align: center;
+    font-size: 16px; 
+    font-family: "Coiny", system-ui;
   
 }
 
