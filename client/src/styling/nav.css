@@ -1,64 +1,55 @@
+/* Nav container */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px; /* increased for search + links */
+  width: 100vw;
+  background: #ffa5cf;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+/* Top row items (logo, search, icons) */
 .nav-items {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* keep items in a row, not squished */
+  padding: 5px 20px;
   width: 100%;
-  padding: 5px 40px;
-  gap: 15px; /* space between logo, search, acct, cart */
+  justify-content: space-between;
 }
 
-
-#logo {
-  height: 60px;
-  margin-right: 20px; 
-}
-
-
-.search-container {
-  display: flex;
-  align-items: center;
-  max-width: 400px; /* limit width */
-  flex-grow: 0; /* no stretching */
-}
-
-
-.icons:not(#logo) {
+/* Logo and icons */
+#logo, .icons {
   height: 40px;
-  width: auto;
-  margin-left: 10px; 
+  margin-right: 10px;
 }
 
-.search-container {
-  display: flex;
-  align-items: center;
-  flex-grow: 1; 
-  max-width: 500px; 
-}
-
-
+/* Search box */
 .search-box {
-  width: 100%;
-  height: 40px;
+  width: 60%;
+  height: 35px;
   padding: 5px 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: 3px solid rgb(244, 237, 231);
-  margin: 0; 
   transition: outline 0.2s ease;
-  font-size: 14px;
+  margin-left: 10px;
 }
 
-
+/* Soft outline on focus */
 .search-box:focus {
   outline: 2px solid rgb(228, 172, 175);
   outline-offset: 2px;
 }
 
-
+/* Search button */
 .search-btn {
   height: 40px;
-  padding: 0 15px;
+  padding: 5px 15px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border: none;
@@ -67,34 +58,29 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
-  margin-left: -3px; 
 }
 
 .search-btn:hover {
   background-color: rgb(176, 185, 128);
 }
 
-
-#cart-btn {
-  margin-left: 20px; 
-}
-
+/* Cart button */
 #cart-btn img {
-  height: 40px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
 }
 
-
+/* Nav links (page navigation) */
 #links {
   display: flex;
   justify-content: center;
   margin-top: 5px;
-  gap: 10px;
+  gap: 10px; /* space between links */
 }
 
 .navlink {
-  background-color: rgb(228, 172, 175);
-  color: rgb(150, 92, 85);
+  background-color: rgb(228, 172, 175); /* pink pastel */
+  color: rgb(150, 92, 85); /* brown text */
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: bold;
@@ -104,9 +90,9 @@
 }
 
 .navlink:hover {
-  background-color: rgb(176, 185, 128);
+  background-color: rgb(176, 185, 128); /* pastel green hover */
 }
 
 .navlink.active {
-  background-color: rgb(228, 120, 135);
+  background-color: rgb(228, 120, 135); 
 }
