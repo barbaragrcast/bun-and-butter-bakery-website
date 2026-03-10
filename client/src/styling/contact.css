@@ -82,3 +82,22 @@ input[type="submit"]:hover {
   font-size: 16px; 
   margin-bottom: 6px; 
 }
+
+
+#contact button[type="submit"] {
+  background-color: rgb(228, 172, 175); 
+  color: rgb(150, 92, 85);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 20px; 
+  font-family: "Coiny", system-ui;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+
+#contact button[type="submit"]:hover {
+  background-color: rgb(176, 185, 128);
+  color: rgb(150, 92, 85);
+}
