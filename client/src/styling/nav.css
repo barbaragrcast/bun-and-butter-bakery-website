@@ -1,49 +1,42 @@
-/* Nav container */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 80px; 
-  width: 100vw;
-  background: #ffa5cf;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-/* Top row items (logo, search, cart) */
 .nav-items {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
-  padding: 5px 40px; /* extra padding for spacing */
+  padding: 0 40px;
 }
 
-/* Logo adjustments */
+
 #logo {
-  height: 60px; /* bigger logo */
-  margin-right: 30px; /* move it to the right */
+  height: 60px;
+  margin-right: 20px; 
 }
 
-/* Account and cart icons */
-.icons:not(#logo) {
-  height: 40px; /* normal size for acct and cart */
-  width: auto;
-  margin-right: 10px;
-}
 
-/* Search container: combine search box + button */
 .search-container {
   display: flex;
   align-items: center;
-  flex-grow: 1; /* take up remaining space */
-  max-width: 500px; /* optional: limit width */
+  flex-grow: 1; 
+  max-width: 500px; 
+  margin: 0 20px;
 }
 
-/* Search box */
+
+.icons:not(#logo) {
+  height: 40px;
+  width: auto;
+  margin-left: 10px; 
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; 
+  max-width: 500px; 
+}
+
+
 .search-box {
   width: 100%;
   height: 40px;
@@ -51,18 +44,18 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: 3px solid rgb(244, 237, 231);
-  margin: 0; /* remove margin so it's flush with button */
+  margin: 0; 
   transition: outline 0.2s ease;
   font-size: 14px;
 }
 
-/* Search box focus */
+
 .search-box:focus {
   outline: 2px solid rgb(228, 172, 175);
   outline-offset: 2px;
 }
 
-/* Search button */
+
 .search-btn {
   height: 40px;
   padding: 0 15px;
@@ -74,16 +67,16 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
-  margin-left: -3px; /* connect with search box border */
+  margin-left: -3px; 
 }
 
 .search-btn:hover {
   background-color: rgb(176, 185, 128);
 }
 
-/* Cart button */
+
 #cart-btn {
-  margin-left: 20px; /* move cart closer to search */
+  margin-left: 20px; 
 }
 
 #cart-btn img {
@@ -91,7 +84,7 @@
   width: 40px;
 }
 
-/* Nav links (page navigation) */
+
 #links {
   display: flex;
   justify-content: center;
