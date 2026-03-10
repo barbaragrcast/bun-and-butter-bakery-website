@@ -18,32 +18,36 @@ const NavBar = (props) => {
   return (
     <div className="nav">
       <div className="nav-items">
-        {/* Logo */}
-        <img className="icons" id="logo" src={logo} alt="logo" />
-
-        {/* Search box + button container */}
-        <div className="search-container">
-          <input
-            type="text"
-            className="search-box"
-            placeholder="search"
-            value={searchTerm}
-            onChange={handleInputChange}
-          />
-          <Link to="/shopping">
-            <button className="search-btn" onClick={handleSearchClick}>
-              search
-            </button>
-          </Link>
+        {/* Left section: Logo */}
+        <div className="left">
+          <img id="logo" className="icons" src={logo} alt="logo" />
         </div>
 
-        {/* Account icon */}
-        <img className="icons" src={acct} alt="account" />
+        {/* Center section: Search */}
+        <div className="center">
+          <div className="search-container">
+            <input
+              type="text"
+              className="search-box"
+              placeholder="search"
+              value={searchTerm}
+              onChange={handleInputChange}
+            />
+            <Link to="/shopping">
+              <button className="search-btn" onClick={handleSearchClick}>
+                search
+              </button>
+            </Link>
+          </div>
+        </div>
 
-        {/* Cart icon */}
-        <Link to="/cart" id="cart-btn">
-          <img className="icons" src={cartlogo} alt="cart" />
-        </Link>
+        {/* Right section: Account + Cart */}
+        <div className="right">
+          <img className="icons" src={acct} alt="account" />
+          <Link to="/cart" id="cart-btn">
+            <img className="icons" src={cartlogo} alt="cart" />
+          </Link>
+        </div>
       </div>
 
       {/* Page navigation links */}

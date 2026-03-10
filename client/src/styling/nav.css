@@ -13,20 +13,32 @@
   justify-content: center;
 }
 
-/* Top row items (logo, search, account/cart) */
 .nav-items {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* spread items: logo | search | right icons */
-  width: 90%; /* leave margin on sides */
-  max-width: 1200px; 
-  padding: 5px 0; 
+  justify-content: space-between; /* spread sections left/center/right */
+  width: 90%;
+  max-width: 1200px;
+  padding: 5px 0;
 }
 
-/* Logo adjustments */
+.nav-items .left,
+.nav-items .center,
+.nav-items .right {
+  display: flex;
+  align-items: center;
+}
+
+/* Center search bar */
+.nav-items .center {
+  justify-content: center;
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Logo size */
 #logo {
   height: 60px;
-  margin-right: 30px; /* move logo a bit to the right */
 }
 
 /* Search container: combine search box + button */
@@ -77,12 +89,13 @@
   background-color: rgb(176, 185, 128);
 }
 
-/* Account & Cart icons */
 .icons:not(#logo) {
   height: 40px;
   width: auto;
-  margin-left: 5px; /* make acct & cart closer together */
+  margin-left: 5px; /* closer together */
 }
+
+
 
 /* Cart button */
 #cart-btn img {
