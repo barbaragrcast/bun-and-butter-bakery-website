@@ -120,10 +120,10 @@ apiRouter.post('/submit-form', async (req, res) => {
 });
 
 
-app.get("/test-db", async (req, res) => {
+app.get("/api/test-db", async (req, res) => {
   try {
-    const { rows } = await db.query("SELECT * FROM products LIMIT 1");
-    res.json({ success: true, sample: rows[0] });
+    const result = await db.query("SELECT * FROM products LIMIT 5");
+    res.json({ success: true, products: result.rows });
   } catch (err) {
     console.error(err);
     res.status(500).json({ success: false, error: err.message });
