@@ -1,6 +1,6 @@
-
 import React from "react";
 import productImg from "../images/productImg.png";
+import ProductName from "./ProductName"; 
 
 const Product = ({ product, addToCart }) => {
   return (
@@ -8,12 +8,17 @@ const Product = ({ product, addToCart }) => {
       <div className="img-frame">
         <img src={product.image_url || productImg} alt={product.name} />
       </div>
-      <h2>{product.name}</h2>
+
+      
+      <ProductName name={product.name} />
+
       <p>{product.description}</p>
       <p>${product.price}</p>
-      {}
+
       {addToCart && (
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
+        <button className="add-cart-btn" onClick={() => addToCart(product)}>
+          Add to Cart
+        </button>
       )}
     </div>
   );
