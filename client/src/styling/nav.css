@@ -28,6 +28,13 @@
   margin-right: 30px; /* move it to the right */
 }
 
+/* Account and cart icons */
+.icons:not(#logo) {
+  height: 40px; /* normal size for acct and cart */
+  width: auto;
+  margin-right: 10px;
+}
+
 /* Search container: combine search box + button */
 .search-container {
   display: flex;
