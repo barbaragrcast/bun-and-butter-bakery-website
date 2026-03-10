@@ -12,8 +12,8 @@ const Product = ({ product, addToCart }) => {
       
       <ProductName name={product.name} />
 
-      <p>{product.description}</p>
-      <p>${product.price}</p>
+     <p className="product-description">{product.description}</p>
+    <p className="product-price">${product.price}</p>
 
       {addToCart && (
         <button className="add-cart-btn" onClick={() => addToCart(product)}>
