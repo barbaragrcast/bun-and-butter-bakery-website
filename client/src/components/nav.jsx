@@ -18,12 +18,12 @@ const NavBar = (props) => {
   return (
     <div className="nav">
       <div className="nav-items">
-        {/* Left section: Logo */}
+    
         <div className="left">
           <img id="logo" className="icons" src={logo} alt="logo" />
         </div>
 
-        {/* Center section: Search */}
+        
         <div className="center">
           <div className="search-container">
             <input
@@ -41,7 +41,7 @@ const NavBar = (props) => {
           </div>
         </div>
 
-        {/* Right section: Account + Cart */}
+       
         <div className="right">
           <img className="icons" src={acct} alt="account" />
           <Link to="/cart" id="cart-btn">
@@ -50,7 +50,7 @@ const NavBar = (props) => {
         </div>
       </div>
 
-      {/* Page navigation links */}
+   
       <div id="links">
         <Link className="navlink" to="/">Home</Link>
         <Link className="navlink" to="/shopping">Shopping</Link>
