@@ -73,3 +73,12 @@ input[type="submit"]:hover {
   background-color: rgb(176, 185, 128);
   color: rgb(150, 92, 85);
 }
+
+
+#contact label {
+  display: block;
+  font-family: "Coiny", system-ui;
+  color: rgb(150, 92, 85); 
+  font-size: 16px; 
+  margin-bottom: 6px; 
+}
