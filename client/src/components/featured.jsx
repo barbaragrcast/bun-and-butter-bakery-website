@@ -34,7 +34,7 @@ const Featured = () => {
               src={product.image_url}
               alt=""
             />
-            <h3>{product.name} style={{ color: "rgb(150, 92, 85)" }}</h3>
+            <h3>{product.name} </h3>
           </div>
         ))}
       </div>
