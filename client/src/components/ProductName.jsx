@@ -8,7 +8,7 @@ const ProductName = ({ name }) => {
     const el = nameRef.current;
     if (!el) return;
 
-    let currentSize = 18; 
+    let currentSize = 14; 
     el.style.fontSize = currentSize + "px";
 
   
