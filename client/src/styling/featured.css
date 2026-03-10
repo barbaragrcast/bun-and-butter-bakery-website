@@ -18,12 +18,11 @@
 }
 
 
-.featured-card {
-  min-width: 300px;
-  justify-content: space-between;
-  margin: 20px;
-  
+.featured-card .product-name {
+  color: rgb(150, 92, 85);
+  text-align: center;
 }
+
 
 #gallery-head {
   background: #ffa5cf;
