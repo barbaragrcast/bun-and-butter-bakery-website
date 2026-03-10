@@ -10,6 +10,8 @@
 
 #hero-promo {
   font-size: 3em;
+  font-family: "Coiny", system-ui;
+
   font-weight: bold;
   color: rgb(150, 92, 85);
   text-align: center;
